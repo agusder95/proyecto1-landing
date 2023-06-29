@@ -5,28 +5,43 @@
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>PokeShop</title>
      <link rel="stylesheet" href="./assets/CSS/styles.css">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet"> 
 </head>
 <body>
      <div class="center">
           <header>
                <div id="headerContainer">
-                    <!-- Mobile -->
-                    <div id="menuMobile">
-                         <p>s</p>
-                    </div>
+                    <!----------- Mobile ------------->
+                    <nav id="menuMobile">
+                         <div id="menuToggle">
+                              <input type="checkbox" id="trigger"/>
+                              <span id="top"></span>
+                              <span id="mid"></span>
+                              <span id="bott"></span>
+
+                              <ul>
+                                   <li><a href="#portada"> Portada </a></li>
+                                   <li><a href="#products"> Productos </a></li>
+                                   <li><a href="#login"> Registro </a></li>
+                                   <li><a href="#aboutUs"> Nosotros </a></li>
+                              </ul>
+                         </div>
+                    </nav>
 
                     <div class="imgLogo">
                          <img src="./assets/Images/page/Logo.png" alt="logoPage">
                     </div>
-                    <div class="imgCart">
-                         <img src="./assets/Images/page/shopping-cart.png" alt="cart">
+                    <div id="cartContainer">
+                         <div class="imgCart">
+                              <img src="./assets/Images/page/shopping-cart.png" alt="cart">
+                         </div>
                     </div>
                </div>
 
-
-
-               <!-- Desktop -->
-               <nav>
+               <!----------- Desktop ------------->
+               <nav id="desktop">
                     <ul>
                          <li><a href="#portada"> Portada </a></li>
                          <li><a href="#products"> Productos </a></li>
@@ -37,7 +52,7 @@
           </header>
 
           <section id="portada">
-               <p>fdsfsdfsd</p>
+               <p>En Pokeshop encontraras todo lo necesario para emprender tu largo viaje y... Atrapalos a todos!!!</p>
                <div class="prtadaImage">
                     <img src="./assets/Images/page/banner1.png" alt="bannerPortada">
                </div>
@@ -55,7 +70,7 @@
                                    </div>
                               </div>
                               <div class="info">
-                                   <h2>Glasses</h2>
+                                   <h3>Glasses</h3>
                                    <p>$300</p>
                                    <button class="addCard">
                                         Comprar
@@ -72,7 +87,7 @@
                                    </div>
                               </div>
                               <div class="info">
-                                   <h2>Bike</h2>
+                                   <h3>Bike</h3>
                                    <p>$1500</p>
                                    <button class="addCard">
                                         Comprar
@@ -89,7 +104,7 @@
                                    </div>
                               </div>
                               <div class="info">
-                                   <h2>Awakening</h2>
+                                   <h3>Awakening</h3>
                                    <p>$200</p>
                                    <button class="addCard">
                                         Comprar
@@ -105,7 +120,7 @@
                                    </div>
                               </div>
                               <div class="info">
-                                   <h2>FullHeal</h2>
+                                   <h3>FullHeal</h3>
                                    <p>$250</p>
                                    <button class="addCard">
                                         Comprar
@@ -122,7 +137,7 @@
                                    </div>
                               </div>
                               <div class="info">
-                                   <h2>MasterBall</h2>
+                                   <h3>MasterBall</h3>
                                    <p>$800</p>
                                    <button class="addCard">
                                         Comprar
@@ -139,7 +154,7 @@
                                    </div>
                               </div>
                               <div class="info">
-                                   <h2>PokeBall</h2>
+                                   <h3>PokeBall</h3>
                                    <p>$50</p>
                                    <button class="addCard">
                                         Comprar
@@ -156,7 +171,7 @@
                                    </div>
                               </div>
                               <div class="info">
-                                   <h2>hyper-potion</h2>
+                                   <h3>hyper-potion</h3>
                                    <p>$180</p>
                                    <button class="addCard">
                                         Comprar
@@ -173,7 +188,7 @@
                                    </div>
                               </div>
                               <div class="info">
-                                   <h2>Potion</h2>
+                                   <h3>Potion</h3>
                                    <p>$150</p>
                                    <button class="addCard">
                                         Comprar
@@ -189,11 +204,11 @@
                <form>
                     <div class="dataContainer">
                          <label for="fName">Nombre</label>
-                         <input type="text" id="fName" name="fName">
+                         <input type="text" id="fName" name="fName" autocomplete="given-name">
                     </div>
                     <div class="dataContainer">
                          <label for="lName">Apellido</label>
-                         <input type="text" id="lName" name="lName">
+                         <input type="text" id="lName" name="lName" autocomplete="family-name">
                     </div>
                     <div class="dataContainer">
                          <label for="email">Mail</label>
@@ -201,14 +216,14 @@
                     </div>
                     <div class="dataContainer">
                          <label for="ageConfrim">Soy mayor de 18</label>
-                         <input type="checkbox" class="ageConfrim" name="ageConfrim">
+                         <input type="checkbox" id="ageConfrim" name="ageConfrim">
                     </div>
                     <button type="submit" id="submit">Enviar</button>
                </form>
           </section>
           <section id="aboutUs">
                <h2>Quienes Somos</h2>
-               <p>fsdfsdfsdfsdfsfdsfs</p>
+               <p>Somos una pequeña tienda ubicada en pueblo paleta. Nos enorgullece ofrecer productos auténticos para seguir creciendo y evolucionando. Queremos ser tu destino confiable para todo lo relacionado con Pokémon, proporcionándote productos de primera calidad y exclusivos que te permitan vivir tu pasión por este increíble universo.</p>
           </section>
           <footer>
                <ul>
