@@ -193,22 +193,6 @@ $main-footer:#747097;
           #desktop{
                display: none;
           }
-
-          /* #desktop{
-               margin: 0 auto;
-               height: 100%;
-               width: 80%;
-               ul{
-                    display: flex;
-                    justify-content: space-around;
-                    align-items: center;
-                    height: 100%;
-                    li{
-                         width: 7rem;
-                         text-align: center;
-                    }
-               }
-          } */
      }
      #portada{
           
@@ -216,6 +200,8 @@ $main-footer:#747097;
           justify-content: center;
           align-items: center;
           p{
+               text-align: center;
+               line-height: 22px;
                font-weight: bold;
                margin: 0 1rem;
                position: absolute;
@@ -360,6 +346,8 @@ $main-footer:#747097;
           }
      }
      #aboutUs{
+          text-align: center;
+          line-height: 22px;
           margin: 2rem 0 1rem;
           display: flex;
           flex-direction: column;
@@ -405,10 +393,12 @@ $main-footer:#747097;
      #portada{
           p{
                font-size: x-large;
+               line-height: 30px;
           }
      }
      #aboutUs{
           p{
+               line-height: 30px;
                font-size: inherit;
                margin: 0 3rem;
           }
@@ -485,6 +475,7 @@ $main-footer:#747097;
      }
      #aboutUs{
           p{
+               line-height: 35px;
                margin: 0 20rem;
           }
      }

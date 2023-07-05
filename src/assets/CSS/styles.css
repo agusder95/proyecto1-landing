@@ -63,21 +63,6 @@
     box-shadow: 1px 6px 21px -1px black;
     -webkit-box-shadow: 1px 6px 21px -1px black;
     -moz-box-shadow: 1px 6px 21px -1px black;
-    /* #desktop{
-         margin: 0 auto;
-         height: 100%;
-         width: 80%;
-         ul{
-              display: flex;
-              justify-content: space-around;
-              align-items: center;
-              height: 100%;
-              li{
-                   width: 7rem;
-                   text-align: center;
-              }
-         }
-    } */
   }
   header #headerContainer {
     display: flex;
@@ -195,6 +180,8 @@
     align-items: center;
   }
   #portada p {
+    text-align: center;
+    line-height: 22px;
     font-weight: bold;
     margin: 0 1rem;
     position: absolute;
@@ -335,6 +322,8 @@
     background-color: #8c8c8c;
   }
   #aboutUs {
+    text-align: center;
+    line-height: 22px;
     margin: 2rem 0 1rem;
     display: flex;
     flex-direction: column;
@@ -378,8 +367,10 @@
 @media screen and (min-width: 720px) {
   #portada p {
     font-size: x-large;
+    line-height: 30px;
   }
   #aboutUs p {
+    line-height: 30px;
     font-size: inherit;
     margin: 0 3rem;
   }
@@ -441,6 +432,7 @@
     width: 40rem;
   }
   #aboutUs p {
+    line-height: 35px;
     margin: 0 20rem;
   }
   footer {
