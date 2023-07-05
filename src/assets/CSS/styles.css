@@ -36,6 +36,11 @@
   color: black;
 }
 
+* hr {
+  width: 90%;
+  margin: 2rem auto;
+}
+
 .center {
   max-width: 1600px;
   margin: auto;
@@ -151,6 +156,10 @@
     transform: rotate(-45deg) translate(-1px, -2px);
   }
   header #headerContainer #menuMobile #menuToggle ul {
+    backdrop-filter: blur(5px);
+    box-shadow: 5px 5px 31px -7px rgba(0, 0, 0, 0.71);
+    -webkit-box-shadow: 5px 5px 31px -7px rgba(0, 0, 0, 0.71);
+    -moz-box-shadow: 5px 5px 31px -7px rgba(0, 0, 0, 0.71);
     position: absolute;
     width: 180px;
     height: 23rem;
@@ -162,7 +171,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    background: rgba(161, 157, 193, 0.831372549);
+    background: rgba(228, 229, 231, 0.7294117647);
     list-style-type: none;
     transform-origin: 0% 0%;
     transform: translate(-110%);
@@ -189,7 +198,7 @@
     font-weight: bold;
     margin: 0 1rem;
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.5607843137);
+    backdrop-filter: blur(5px);
     color: #e4e5e7;
     text-indent: 10px;
     z-index: 1;
@@ -254,6 +263,9 @@
     background-color: #527d3a;
   }
   #login {
+    margin-bottom: 4rem;
+  }
+  #login .formContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -261,10 +273,13 @@
     width: 20rem;
     margin: auto;
   }
-  #login h2 {
-    margin: 3rem 0 1rem;
+  #login .formContainer:last-child {
+    margin-top: 2rem;
   }
-  #login form {
+  #login .formContainer h2 {
+    margin: 1rem 0 1rem;
+  }
+  #login .formContainer form {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -273,7 +288,7 @@
     border-radius: 15px;
     padding: 10px;
   }
-  #login form .dataContainer {
+  #login .formContainer form .dataContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -281,27 +296,34 @@
     padding: 1rem 0;
     width: 100%;
   }
-  #login form .dataContainer:nth-child(4) {
+  #login .formContainer form .dataContainer:nth-child(4) {
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
   }
-  #login form .dataContainer:nth-child(4) #ageConfrim {
+  #login .formContainer form .dataContainer:nth-child(4) #ageConfrim {
     margin-left: 2rem;
     width: 1rem;
     height: 1rem;
   }
-  #login form .dataContainer label {
+  #login .formContainer form .dataContainer label {
     font-size: 18px;
   }
-  #login form .dataContainer input {
+  #login .formContainer form .dataContainer input {
     height: 2rem;
     width: 100%;
+    padding-left: 1rem;
     font-size: 1rem;
     border-radius: 6px;
     border: none;
   }
-  #login form #submit {
+  #login .formContainer form .restaurePass {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  #login .formContainer form #submit {
     background-color: #e4e5e7;
     margin: 1rem 0;
     width: 6rem;
@@ -309,11 +331,11 @@
     border-radius: 5px;
     border: 1px solid black;
   }
-  #login form #submit:active {
+  #login .formContainer form #submit:active {
     background-color: #8c8c8c;
   }
   #aboutUs {
-    margin: 3rem 0 1rem;
+    margin: 2rem 0 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -360,6 +382,9 @@
   #aboutUs p {
     font-size: inherit;
     margin: 0 3rem;
+  }
+  #login .formContainer {
+    width: 30rem;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -412,9 +437,8 @@
     height: 11rem;
     margin: 1rem auto;
   }
-  #login {
+  #login .formContainer {
     width: 40rem;
-    margin: 1rem auto 0;
   }
   #aboutUs p {
     margin: 0 20rem;
