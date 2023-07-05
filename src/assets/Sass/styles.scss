@@ -3,7 +3,7 @@ $main-black:black;
 $sec-black:#0000008f;
 $main-white: #e4e5e7;
 $main-grey: #8c8c8c;
-$mobile-menu:#a19dc1d4;
+$mobile-menu:#e4e5e7ba;
 $purchaseButton:#88cd61;
 $purchaseButtonActive:#527d3a;
 $main-footer:#747097;
@@ -43,6 +43,10 @@ $main-footer:#747097;
 *a{
      text-decoration: none;
      color: $main-black;
+}
+*hr{
+     width: 90%;
+     margin: 2rem auto;
 }
 
 .center{
@@ -148,6 +152,10 @@ $main-footer:#747097;
                               transform: rotate(-45deg) translate(-1px, -2px);
                          }
                          ul{
+                              backdrop-filter: blur(5px);
+                              box-shadow: 5px 5px 31px -7px rgba(0,0,0,0.71);
+                              -webkit-box-shadow: 5px 5px 31px -7px rgba(0,0,0,0.71);
+                              -moz-box-shadow: 5px 5px 31px -7px rgba(0,0,0,0.71);
                               position: absolute;
                               width: 180px;
                               height: 23rem;
@@ -211,7 +219,7 @@ $main-footer:#747097;
                font-weight: bold;
                margin: 0 1rem;
                position: absolute;
-               background-color: $sec-black;
+               backdrop-filter: blur(5px);
                color:$main-white;
                text-indent: 10px;
                z-index: 1;
@@ -279,66 +287,80 @@ $main-footer:#747097;
      }
 
      #login{
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          width: 20rem;
-          margin: auto;
-          h2{
-               margin: 3rem 0 1rem;
-          }
-          form{
+          margin-bottom: 4rem;
+          .formContainer{
+               &:last-child{
+                    margin-top: 2rem;
+               }
+
                display: flex;
                flex-direction: column;
+               justify-content: center;
                align-items: center;
-               width: 100%;
-               border: 1px solid $main-black;
-               border-radius: 15px;
-               padding: 10px;
-               .dataContainer{
+               width: 20rem;
+               margin: auto;
+               h2{
+                    margin: 1rem 0 1rem;
+               }
+               form{
                     display: flex;
                     flex-direction: column;
-                    justify-content:center;
-                    align-items: baseline;
-                    padding:1rem 0;
+                    align-items: center;
                     width: 100%;
-                    &:nth-child(4){
-                         flex-direction:row;
-                         align-items: center;
-                         justify-content:flex-start;
-                         #ageConfrim{
-                              margin-left:2rem;
-                              width: 1rem;
-                              height: 1rem;
+                    border: 1px solid $main-black;
+                    border-radius: 15px;
+                    padding: 10px;
+                    .dataContainer{
+                         display: flex;
+                         flex-direction: column;
+                         justify-content:center;
+                         align-items: baseline;
+                         padding:1rem 0;
+                         width: 100%;
+                         &:nth-child(4){
+                              flex-direction:row;
+                              align-items: center;
+                              justify-content:flex-start;
+                              #ageConfrim{
+                                   margin-left:2rem;
+                                   width: 1rem;
+                                   height: 1rem;
+                              }
+                         }
+                         label{
+                              font-size: 18px;
+                         }
+                         input{
+                              height: 2rem;
+                              width: 100%;
+                              padding-left: 1rem;
+                              font-size: 1rem;
+                              border-radius: 6px;
+                              border: none;
                          }
                     }
-                    label{
-                         font-size: 18px;
-                    }
-                    input{
-                         height: 2rem;
+                    .restaurePass{
                          width: 100%;
-                         font-size: 1rem;
-                         border-radius: 6px;
-                         border: none;
+                         display: flex;
+                         align-items: center;
+                         justify-content: flex-end;
                     }
-               }
-               #submit{
-                    background-color:$main-white;
-                    margin:1rem 0;
-                    width: 6rem;
-                    height: 3rem;
-                    border-radius: 5px;
-                    border:1px solid $main-black;
-                    &:active{
-                         background-color:$main-grey ;
+                    #submit{
+                         background-color:$main-white;
+                         margin:1rem 0;
+                         width: 6rem;
+                         height: 3rem;
+                         border-radius: 5px;
+                         border:1px solid $main-black;
+                         &:active{
+                              background-color:$main-grey ;
+                         }
                     }
                }
           }
      }
      #aboutUs{
-          margin: 3rem 0 1rem;
+          margin: 2rem 0 1rem;
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -389,6 +411,12 @@ $main-footer:#747097;
           p{
                font-size: inherit;
                margin: 0 3rem;
+          }
+     }
+     #login{
+          .formContainer{
+               width: 30rem;
+               
           }
      }
 }
@@ -450,8 +478,10 @@ $main-footer:#747097;
           }
      }
      #login{
-          width: 40rem;
-          margin: 1rem auto 0;
+          .formContainer{
+               width: 40rem;
+               
+          }
      }
      #aboutUs{
           p{
